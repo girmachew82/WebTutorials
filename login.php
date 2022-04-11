@@ -16,7 +16,10 @@ $db = mysqli_select_db($conn,'dbu_lms');
 // }
 // else
 // echo mysqli_error($conn);
-$sql_users = mysqli_query($conn,"SELECT * FROM `users`");
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+$sql_users = mysqli_query($conn,"SELECT * FROM `users` WHERE username ='$username' AND password ='$password' ");
 
 while($row = mysqli_fetch_array($sql_users))
 {
@@ -30,21 +33,27 @@ while($row = mysqli_fetch_array($sql_users))
     $role_id = $row['role_id'];
     $username = $row['username'];
     $password = $row['password'];
-    if ($role_id ==1)
+    if ($role_id == 1)
     {
-        include_once('student.php');
+        include_once('student/student.php');
     }
-    else if ($role_id ==2)
+    else if ($role_id == 2)
     {
         echo "HOD";
     }
-    else if ($role_id ==3)
+    else if ($role_id == 3)
     {
         echo "Instructor";
     }
-    else if ($role_id ==4)
+    else if ($role_id == 4)
     {
         echo "Registrar";
     }
+    else if ($role_id ==5)
+    {
+        require_once('admin/index.php');
+    }
+
+ 
 }
 ?>

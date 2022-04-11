@@ -7,18 +7,9 @@
     <title>index</title>
 </head>
 <body>
-    <header>E-learning</header>
-    <nav>
-       
-        <a href="user.html">User</a>
-     
-        <a href="role.html">Role</a>
-     
-        <a href="course.html">Course</a>
-     
-   
-  
+  <?php
+  require_once('admin_header.php');
 
-    </nav>
+  ?>
 </body>
 </html>
