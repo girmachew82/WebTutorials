@@ -37,6 +37,7 @@
 
 
     </form>
+    <a href="seachcollege.php" >Search</a>
     <table border=1>
 
 <thead>
@@ -48,8 +49,7 @@
 </thead>
 
 <?php
-       $conn = mysqli_connect('127.0.0.1','root','');
-       $db = mysqli_select_db($conn,'dbu_lms');
+     require_once('dbconnection.php');
     $sql_select = mysqli_query($conn,"SELECT * FROM `colleges`");
     if($sql_select)
     {

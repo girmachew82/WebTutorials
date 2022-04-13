@@ -8,8 +8,7 @@
 </head>
 <body>
     <?php
-    $conn = mysqli_connect('127.0.0.1','root','');
-    $db = mysqli_select_db($conn,'dbu_lms');
+        require_once('dbconnection.php');
     if(isset($_GET['collegeid']))
     {
         $coll_id = $_GET['collegeid'];

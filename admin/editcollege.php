@@ -9,9 +9,8 @@
 <body>
     <?php
     require_once('admin_header.php');
-  
-    $conn = mysqli_connect('127.0.0.1','root','');
-    $db = mysqli_select_db($conn,'dbu_lms');
+    require_once('dbconnection.php');
+
     $college_name ='';
     if(isset($_GET['collegeid']))
     {

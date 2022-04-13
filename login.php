@@ -35,7 +35,7 @@ while($row = mysqli_fetch_array($sql_users))
     $password = $row['password'];
     if ($role_id == 1)
     {
-        include_once('student/student.php');
+        header('student/student.php');
     }
     else if ($role_id == 2)
     {
@@ -51,7 +51,7 @@ while($row = mysqli_fetch_array($sql_users))
     }
     else if ($role_id ==5)
     {
-        require_once('admin/index.php');
+        header('location:admin/index.php');
     }
 
  
