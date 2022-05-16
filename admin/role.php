@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>college</title>
+    <title>Role</title>
 </head>
 <body>
     <?php
@@ -15,10 +15,10 @@
 
     if(isset($_POST['register']))
     {
-       $college_name = $_POST['college'];
-       echo $college_name;
+       $role_name = $_POST['role'];
+       echo $role_name;
         $sql_insert = mysqli_query($conn, "INSERT INTO
-         `colleges`(`college_name`) VALUES ('$college_name')");
+         `tbl_role`(`role_name`) VALUES ('$role_name')");
          if($sql_insert)
          {
              echo "Succesfully registred";
@@ -31,8 +31,8 @@
 
     ?>
     <form action="" method="post">
-    <label for="forcollege">College</label>
-    <input type="text" name="college" >
+    <label for="forrole">Role</label>
+    <input type="text" name="role" >
     <input type="submit" name ="register" value="Register">
 
 
@@ -43,26 +43,26 @@
 <thead>
     <tr>
         <th>No</th>
-        <th>College name</th>
+        <th>Role name</th>
         <th>Actions</th>
     </tr>
 </thead>
 
 <?php
      require_once('dbconnection.php');
-    $sql_select = mysqli_query($conn,"SELECT * FROM `colleges`");
+    $sql_select = mysqli_query($conn,"SELECT * FROM `tbl_role`");
     if($sql_select)
     {
         $no =1;
     while($row = mysqli_fetch_assoc($sql_select))
     {
-        $college_id = $row['college_id'];
+        $role_id = $row['role_id'];
         ?>
         <tr>
         <td><?php echo $no?></td>
-       <td><?php  echo $row['college_name'];?></td>
-       <td> <a href="editcollege.php?collegeid=<?php echo $college_id;?>">Edit</a>
-        | <a href="delete_college.php?collegeid=<?php echo $college_id;?>">Delete</a></td>
+       <td><?php  echo $row['role_name'];?></td>
+       <td> <a href="editrole.php?roleid=<?php echo $role_id;?>">Edit</a>
+        | <a href="delete_role.php?roleid=<?php echo $role_id;?>">Delete</a></td>
         </tr>
        <?php
        $no++;

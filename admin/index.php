@@ -11,5 +11,6 @@
   require_once('admin_header.php');
 
   ?>
+  This is an admininstrator page
 </body>
 </html>

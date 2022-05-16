@@ -6,6 +6,6 @@
 <a href="department.php">Department</a>
 <a href="users.php">Users</a>
 <a href="role.php">Role</a>
-
+<a href="../logout.php" >Logout</a>
 </nav>
 </header>

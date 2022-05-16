@@ -35,7 +35,7 @@ while($row = mysqli_fetch_array($sql_users))
     $password = $row['password'];
     if ($role_id == 1)
     {
-        header('student/student.php');
+        header('location:student/student.php');
     }
     else if ($role_id == 2)
     {
