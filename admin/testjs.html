@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        var x =4;
+        var y =5;
+        console.log(x+ " + "+y+" = "+(x +y));
+        console.log(x+ " - "+y+" = "+(x -y));
+        if(x > y)
+        {
+            console.log(x+ " > "+y)
+        }
+        else
+        {
+            console.log(x+ " < "+y)
+        }
+        switch (new Date().getDay()) {
+            case 0:
+              day = "Sunday";
+              break;
+            case 1:
+              day = "Monday";
+              break;
+            case 2:
+               day = "Tuesday";
+              break;
+            case 3:
+              day = "Wednesday";
+              break;
+            case 4:
+              day = "Thursday";
+              break;
+            case 5:
+              day = "Friday";
+              break;
+            case 6:
+              day = "Saturday";
+          }
+          console.log("The dat to day is "+day)
+
+          //loop
+          for (i = 0; i < 5; i++) {
+            var text = "The number is " + i ;
+            console.log(text)
+          }
+          //function 
+          function product(x,y)
+          {
+              return x*y;
+          }
+          console.log(product(4,5))
+          function greeting()
+          {
+              console.log("Hi")
+          }
+          greeting();
+          var students = ["Abebe","Brook","Almaz"];
+          var mark =[90,98,100]
+          console.log(students[0])
+          console.log(mark[0])
+          //alert("Hello world")
+          prompt(m,"Enter name ")
+          confirm("ghfhgfghfgh")
+    </script>
+</body>

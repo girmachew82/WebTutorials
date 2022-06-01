@@ -3,6 +3,9 @@
 <html>
      <head>
 	<title>Html 5 excercises </title>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style>
 ul {
 list-style-type: circle;
@@ -49,10 +52,11 @@ footer{
 #article1 {
 	float: left;
 	background-color: #e18c27;
-    font-family: fantasy
+    font-family: fantasy;
 }
 #article2 {
 	float: right;
+
 }
 </style>
    </head>
@@ -70,13 +74,19 @@ footer{
 
 	<header> DBU E-learning System </header>		
 	<section>
+	<button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button> 
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+		<script>
+		
+
+		</script>
 	<article id="article1">
 	<!-- HTML 5 tutorils contents goes here -->
     <P>HTML is new Markup language </p>
 	<p>There are new feartures in this language such as Geolocation, drag and drop, API</p>
 	<p>In HTMl elements or tags can be catagorize into two </p>
 	<p>block level</p>
-	<p> some of <a href="blocklevel.html" target="_top ">block level elements </a></p><a href="#pre">Pre</a>
+	<p style="border: 10px; border-color: #0000FF; outline: #44AABB;"> some of <a href="blocklevel.html" target="_top ">block level elements </a></p><a href="#pre">Pre</a>
 			<ul >
 			<li>paragraph</li>
 			<li>heading</li>
@@ -120,7 +130,7 @@ footer{
 		<li>underline	</li>
 		</ol>
 	</article>
-	<article id="article1">
+	<article id="article2">
 	<hr>
 	<p>Inline elements
 		<i>italic </i> <b>bold</b> &nbsp;      &nbsp;  &nbsp;  &nbsp;                     <strong>strong</strong>
